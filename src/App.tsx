@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Button
-        startIcon={PlusIcon}
+        startIcon={<PlusIcon />}
         size="sm"
         variant="primary"
         onClick={() => {}}
