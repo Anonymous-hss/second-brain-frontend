@@ -6,6 +6,13 @@ export interface ButtonProps {
   onClick: () => void;
 }
 
-export const Button = (props: ButtonProps) => {
-  return <button style={{color: }}></button>;
+const variantStyles = {
+  primary: "bg-purple-600 text-white",
+  secondary: "bg-purple-400 text-purple-600",
 };
+
+export const Button = (props: ButtonProps) => {
+  return <button className={variantStyles[props.variant]}>{props.text}</button>;
+};
+
+<Button variant="primary" size="md" onClick={() => {}} text={"asd"}></Button>;
