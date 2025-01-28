@@ -11,8 +11,24 @@ const variantStyles = {
   secondary: "bg-purple-400 text-purple-600",
 };
 
+const sizeStyles = {
+  sm: "py-1 px-2",
+  md: "py-2 px-4",
+  lg: "py-4 px-6",
+};
+
+const defaultStyles = "rounded-md";
+
 export const Button = (props: ButtonProps) => {
-  return <button className={variantStyles[props.variant]}>{props.text}</button>;
+  return (
+    <button
+      className={`${variantStyles[props.variant]} ${defaultStyles} ${
+        sizeStyles[props.size]
+      }`}
+    >
+      {props.text}
+    </button>
+  );
 };
 
 <Button variant="primary" size="md" onClick={() => {}} text={"asd"}></Button>;
